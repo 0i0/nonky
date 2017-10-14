@@ -1,7 +1,7 @@
 
 <img src="https://i.imgur.com/Pj1VqQh.png" align="right"/>
 
-# nonky
+# nonky [![Build Status](https://travis-ci.org/0i0/nonky.svg?branch=v1.1rc)](https://travis-ci.org/0i0/nonky)
 
 nonky is a way to display system information or any kind of information right on your desktop.
 Inspired by Linux's conky it takes a different approach, a straightforward api exposes a lot of data, js libraries are doing the heavier calculations and finally, use HTML5 to customize the look and feel
