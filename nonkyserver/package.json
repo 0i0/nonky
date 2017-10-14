@@ -1,0 +1,32 @@
+{
+  "name": "nonky",
+  "version": "0.0.1",
+  "author": "0i0 (Lior Leo Hakim)",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0i0/nonky.git"
+  },
+  "engines": {
+    "node": "=8.6.0",
+    "npm": "=5.3.0"
+  },
+  "dependencies": {
+    "express": ">=0.0.1",
+    "nowplaying": ">=0.0.1",
+    "request": ">=0.0.1",
+    "smc": ">=0.0.1",
+    "socket.io": ">=0.0.1",
+    "systeminformation": ">=0.0.1",
+    "xml2js": ">=0.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  },
+  "description": "![Screen](https://i.imgur.com/3Et0E1B.png)",
+  "bugs": {
+    "url": "https://github.com/0i0/nonky/issues"
+  },
+  "homepage": "https://github.com/0i0/nonky#readme",
+  "main": "app.js"
+}

@@ -1,0 +1,62 @@
+<html>
+   <head>
+      <title>nonky jquery</title>
+      <link rel="stylesheet" href="/css/reset.css">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+   </head>
+   <body>
+      <div id="anchor">
+         <div id="container">
+            <div class="stats title h1" id="cpu">CPU</div>
+            <div class="stats" id="cpu-data"></div>
+            <div class="stats" id="cputemp-data"></div>
+            <div class="stats title h1" id="mem">Mem</div>
+            <div class="stats" id="mem-data"></div>
+            <table class="stats" id="net" style="width:190px">
+               <tbody>
+                  <tr>
+                     <td style="width:100px"></td>
+                     <td class="h1" style="width:40px">Up </td>
+                     <td class="net-data" id="netup-data" style="width:50px"></td>
+                  </tr>
+                  <tr>
+                     <td style="width:100px"></td>
+                     <td class="h1" style="width:40px">Down </td>
+                     <td class="net-data" id="netdn-data" style="width:50px"></td>
+                  </tr>
+               </tbody>
+            </table>
+            <table class="stats" id="ps-data">
+               <thead>
+                  <tr>
+                     <td class="h1" style="width:80px">Proccess</td>
+                     <td class="h1" style="width:45px">PID</td>
+                     <td class="h1" style="width:45px">Cpu</td>
+                     <td class="h1" style="width:45px">Mem</td>
+                  </tr>
+               </thead>
+               <tbody id="ps-tbody">
+               </tbody>
+            </table>
+            <table class="stats" id="crypto-data">
+               <thead>
+                  <tr>
+                     <td class="h1" style="width:80px"></td>
+                     <td class="h1" style="width:45px"></td>
+                  </tr>
+               </thead>
+               <tbody id="crypto-body">
+               </tbody>
+            </table>
+            <div class="stats" id="now-playing"></div>
+            <div class="stats" id="now-playing-coverart"></div>
+            <canvas class="stats" id="myCanvas" width="200" height="130"></canvas>
+            <canvas class="stats" id="up-chart" width="100" height="35" style="display: block;"></canvas>
+            <canvas class="stats" id="dn-chart" width="100" height="35" style="display: block;"></canvas>
+         </div>
+      </div>
+      <script data-main="/templates/jquery/script" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+   </body>
+</html>

@@ -1,0 +1,101 @@
+html, body{
+    height: 100%;
+}
+
+body{
+   font-family: Menlo,Monaco,Consolas,"Liberation Mono",Arial,"Courier New",monospace;
+   font-size: 10px;
+   color: #cccccc;
+   width:100%;
+   -webkit-font-smoothing: antialiased;
+   /*background-color:#000000;*/
+}
+
+#anchor{
+	height: 100%;
+	right: 0px;
+	position: absolute;
+}
+#container{
+	position: relative;
+	width: 200px;
+	height: 350px;
+}
+.title{
+	position: absolute;
+}
+.stats{
+	position: absolute;
+}
+
+#cpu{
+    top: 38px;
+    left: 75px;
+    font-size: 26px;
+}
+
+#cpu-data{
+	top: 36px;
+	left: 77px;
+}
+
+#cputemp-data{
+    top: 43px;
+    left: 41px;
+    font-size: 14px;
+}
+
+#mem{
+	top: 89px;
+	left: 137px;
+	font-size: 14px;
+}
+
+#mem-data{
+	top: 115px;
+	left: 94px;
+	text-align: right;
+}
+
+#net{
+	top: 144px;
+	display: block;
+	width: 200px;
+}
+.net-data{
+	text-align: right;
+}
+#ps-data{
+	top: 173px;
+}
+
+#crypto-data{
+	top: 250px;
+}
+
+.h1{
+	color:#FFFFFF;
+	font-weight: bold;
+}
+
+#up-chart {
+    top: 135px;
+    left: -6px;
+}
+#dn-chart {
+    top: 148px;
+    left: -6px;
+}
+#now-playing{
+	top: 319px;
+	left: 0px;
+}
+
+#now-playing-coverart{
+	width: 174px;
+	height: 174px;
+	top:350px;
+	border-radius: 20px;
+	opacity: 0.3;
+}
+
