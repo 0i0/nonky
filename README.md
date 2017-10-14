@@ -4,7 +4,7 @@
 # nonky
 
 nonky is a way to display system information or any kind of information right on your desktop.
-Inspired by Linux's conky it takes a different approch, a straight forward api exposes a lot of data, js libraries are doing the heavier calculations and finally, use HTML5 to customize the look and feel
+Inspired by Linux's conky it takes a different approach, a straightforward api exposes a lot of data, js libraries are doing the heavier calculations and finally, use HTML5 to customize the look and feel
 
 ![Screen](https://i.imgur.com/3Et0E1B.png)
 
@@ -12,18 +12,18 @@ Inspired by Linux's conky it takes a different approch, a straight forward api e
 
 Download the App from [here](https://github.com/0i0/nonky/wiki)
 
-# Costumization (Building your own)
+# Customization (Building your own)
 
-Custumization is my first priority!
+Customization is my first priority!
 To make your own nonky
 
 - Download the app
 - Open it
 - Click on the pin icon
-- select "Templates Direcory..."
+- select "Templates Directory..."
 - Create a new folder with the \<name of your template\>
-- make the power house index.html, style.css, script.js
-- creat your design - follow the examples
+- make the powerhouse index.html, style.css, script.js
+- create your design - follow the examples
 - send me a photo to your design and a link to your repo
 - links to designs will be added on this page
 
@@ -34,17 +34,17 @@ There is a RESTFull API to get sistem information
 
     /api/cpus/:samplesNumber/:sampleTimeInMiliseconds
 
-Provides CPU statistics, you can specify the number of samples and inerval between sampleing
+Provides CPU statistics, you can specify the number of samples and interval between sampling
 
     /api/smc/:key
 
-Provides access to Apple's SMC subsystem information about tempatures and fans etc..
+Provides access to Apple's SMC subsystem information about temperatures and fans etc..
 
 for information go [here](https://www.npmjs.com/package/smc)
 
     /api/mem
 
-Provides memory information, this is currently using node's os functions, The data they retrieve might look wierd by the way it counts free memory (might be changed in the near future)
+Provides memory information, this is currently using node's os functions, The data they retrieve might look weird by the way it counts free memory (might be changed in the near future)
 
     /api/defaultnet
 
@@ -64,7 +64,7 @@ Provides information about cryptocurrency rate from coinmarketcap.com
 Websockets are used to provide events as they happen
 Currently provides information to the currently played song either in iTunes or Spotify
 
-to setup a listner follow the jquery example template
+to setup a listener follow the jquery example template
 
 or
 
@@ -84,6 +84,9 @@ and then at the bottom'
       //do some stuff with the data when paused
     })
 
+# Arbitrary shell commands
+
+It is very tempting adding an API for arbitrary shell command, its very easy to implement but than templates can potentially run malicious code on your machine, please let me know if you think this is a necessity or if you want any other api that you think is missing
 
 # Building from source
 
@@ -126,3 +129,5 @@ Bitcoin
 Ethereum
 
 	0x8423b2cA48Bd9a734B4FE27A4E78f64e12131B79​
+
+
