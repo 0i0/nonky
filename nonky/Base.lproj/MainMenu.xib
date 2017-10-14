@@ -707,7 +707,7 @@
                     </menu>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="303-ri-Su5"/>
-                <menuItem title="Templates Directory..." id="Spj-9Q-uLo">
+                <menuItem title="Templates Folder..." id="Spj-9Q-uLo">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openTemplatesDir:" target="Voe-Tx-rLC" id="Htm-Bw-GcE"/>
@@ -727,7 +727,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="-63" y="267"/>
+            <point key="canvasLocation" x="56" y="305"/>
         </menu>
     </objects>
 </document>
