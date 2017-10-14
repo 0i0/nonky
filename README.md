@@ -6,7 +6,7 @@
 nonky is a way to display system information or any kind of information right on your desktop.
 Inspired by Linux's conky it takes a different approach, a straightforward api exposes a lot of data, js libraries are doing the heavier calculations and finally, use HTML5 to customize the look and feel
 
-![Screen](https://i.imgur.com/3Et0E1B.png)
+![Screen](https://i.imgur.com/UAQ9ITE.png)
 
 # Downlod
 
