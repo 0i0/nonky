@@ -12,21 +12,80 @@ Inspired by Linux's conky it takes a different approch, a straight forward api e
 
 Download the App from [here](https://github.com/0i0/nonky/wiki)
 
-# Costumization
+# Costumization (Building your own)
 
 Custumization is my first priority!
 To make your own nonky
 
-- fork the repo
-- clone it
-- run the install script
-- open a new folder in /public/templates/\<your nonchaky\>
+- Download the app
+- Open it
+- Click on the pin icon
+- select "Templates Direcory..."
+- Create a new folder with the name of your template
 - make the power house index.html, style.css, script.js
 - creat your design - follow the examples
 - send me a photo to your design and a link to your repo
 - links to designs will be added on this page
 
-# Installation
+# the API
+
+# RESTFull API
+There is a RESTFull API to get sistem information
+
+    /api/cpus/:samplesNumber/:sampleTimeInMiliseconds
+
+Provides CPU statistics, you can specify the number of samples and inerval between sampleing
+
+    /api/smc/:key
+
+Provides access to Apple's SMC subsystem information about tempatures and fans etc..
+
+for information go [here](https://www.npmjs.com/package/smc)
+
+    /api/mem
+
+Provides memory information, this is currently using node's os functions, The data they retrieve might look wierd by the way it counts free memory (might be changed in the near future)
+
+    /api/defaultnet
+
+Provides information about the default network interface might be used to calculat bandwith and such
+
+    /api/ps/:numOfPs/:sortColumn
+
+Provides information about top processes, you can specify the number of processes it retrieves and and a sorting column 
+Columns are (1)PID (2)CPU Usage (3) Memory usage (4)process name
+
+    /api/crypto
+
+Provides information about cryptocurrency rate from coinmarketcap.com
+
+# Websockets
+
+Websockets are used to provide events as they happen
+Currently provides information to the currently played song either in iTunes or Spotify
+
+to setup a listner follow the jquery example template
+
+or
+
+include the socket.io.js in the head tag like so
+
+    <html>
+      <head>
+       <script src="/socket.io/socket.io.js"></script>
+       ...
+
+and then at the bottom'
+
+    socket.on('playing', function(data){
+      //do some stuff with the data when played
+    })
+    socket.on('paused', function(data){
+      //do some stuff with the data when paused
+    })
+
+
+# Building from source
 
 # Clone git Repo
 
@@ -35,6 +94,9 @@ To make your own nonky
 # Open the Xcode project
 
     build
+
+you might need to change some settings in the info.plist
+if that happens please let me know and i will update this section
 
 # Tipping
 
