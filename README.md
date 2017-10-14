@@ -1,4 +1,3 @@
-
 <img src="https://i.imgur.com/Pj1VqQh.png" align="right"/>
 
 # nonky [![Build Status](https://travis-ci.org/0i0/nonky.svg?branch=v1.1rc)](https://travis-ci.org/0i0/nonky)
@@ -94,9 +93,9 @@ It is very tempting adding an API for arbitrary shell command, its very easy to 
 
     git clone https://github.com/0i0/nonky.git
 
-# Open the Xcode project
+# Xcode project
 
-    build
+Just open the nonky.xcodeproj in Xcode and press the play button
 
 you might need to change some settings in the info.plist
 if that happens please let me know and i will update this section
