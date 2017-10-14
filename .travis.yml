@@ -1,0 +1,4 @@
+os: osx
+
+language: objective-c
+xcode_project: nonky.xcodeproj
