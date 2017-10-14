@@ -10,7 +10,6 @@
 		B321110A1F924D6100065809 /* public in Resources */ = {isa = PBXBuildFile; fileRef = B32111091F924C2800065809 /* public */; };
 		B321110E1F92533300065809 /* app-macos in Resources */ = {isa = PBXBuildFile; fileRef = B321110D1F92533300065809 /* app-macos */; };
 		B32111101F92555200065809 /* playerinfo.rb in Resources */ = {isa = PBXBuildFile; fileRef = B321110F1F92555200065809 /* playerinfo.rb */; };
-		B32111141F92569900065809 /* build.sh in Resources */ = {isa = PBXBuildFile; fileRef = B32111131F92569900065809 /* build.sh */; };
 		B32453E81F9238AC00E1923C /* smc.node in Resources */ = {isa = PBXBuildFile; fileRef = B32453E71F9238AC00E1923C /* smc.node */; };
 		B38BCB831F912D8300F5C0E8 /* Qnonky.icns in Resources */ = {isa = PBXBuildFile; fileRef = B38BCB821F912D8300F5C0E8 /* Qnonky.icns */; };
 		B38BCB851F912D8C00F5C0E8 /* status-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BCB841F912D8C00F5C0E8 /* status-icon.png */; };
@@ -47,7 +46,6 @@
 		B32111091F924C2800065809 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = nonkyserver/public; sourceTree = SOURCE_ROOT; };
 		B321110D1F92533300065809 /* app-macos */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "app-macos"; path = "nonkyserver/app-macos"; sourceTree = SOURCE_ROOT; };
 		B321110F1F92555200065809 /* playerinfo.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; name = playerinfo.rb; path = nonkyserver/node_modules/nowplaying/playerinfo.rb; sourceTree = SOURCE_ROOT; };
-		B32111131F92569900065809 /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = build.sh; path = build/build.sh; sourceTree = "<group>"; };
 		B32453E71F9238AC00E1923C /* smc.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = smc.node; sourceTree = "<group>"; };
 		B38BCB821F912D8300F5C0E8 /* Qnonky.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Qnonky.icns; sourceTree = "<group>"; };
 		B38BCB841F912D8C00F5C0E8 /* status-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-icon.png"; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		B3EACFDC1F9021E400DBCBA9 = {
 			isa = PBXGroup;
 			children = (
-				B32111131F92569900065809 /* build.sh */,
 				B3EACFE71F9021E400DBCBA9 /* nonky */,
 				B3EACFFB1F9021E400DBCBA9 /* nonkyTests */,
 				B3EAD0061F9021E400DBCBA9 /* nonkyUITests */,
@@ -293,7 +290,6 @@
 				B38BCB851F912D8C00F5C0E8 /* status-icon.png in Resources */,
 				B32453E81F9238AC00E1923C /* smc.node in Resources */,
 				B3EACFEF1F9021E400DBCBA9 /* MainMenu.xib in Resources */,
-				B32111141F92569900065809 /* build.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
