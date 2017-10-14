@@ -1,12 +1,16 @@
 
 <img src="https://i.imgur.com/Pj1VqQh.png" align="right"/>
 
-# nonky ![travis-ci](https://api.travis-ci.org/0i0/nonky.svg?branch=master)
+# nonky
 
 nonky is a way to display system information or any kind of information right on your desktop.
 Inspired by Linux's conky it takes a different approch, a straight forward api exposes a lot of data, js libraries are doing the heavier calculations and finally, use HTML5 to customize the look and feel
 
 ![Screen](https://i.imgur.com/3Et0E1B.png)
+
+# Downlod
+
+Download the App from [here](https://github.com/0i0/nonky/wiki)
 
 # Costumization
 
@@ -28,13 +32,9 @@ To make your own nonky
 
     git clone https://github.com/0i0/nonky.git && cd nonky
 
-# Install from shell script
+# Open the Xcode project
 
-	install_nonky.sh
-
-# Run the nonky app
-
-	nonky.app
+    build
 
 # Tipping
 
