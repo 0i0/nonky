@@ -9,7 +9,7 @@ Inspired by Linux's conky it takes a different approach, a straightforward api e
 
 # Downlod
 
-Download the App from [here](https://github.com/0i0/nonky/wiki)
+<a href="https://github.com/0i0/nonky/wiki"><img src="https://i.imgur.com/GbgKotM.png"/></a>
 
 # Customization (Building your own)
 
