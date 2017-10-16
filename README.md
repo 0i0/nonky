@@ -129,4 +129,7 @@ Ethereum
 
 	0x8423b2cA48Bd9a734B4FE27A4E78f64e12131B79​
 
+# Other projects in the same space
+
+If you find this project interesting you might also like [Übersicht](https://github.com/felixhageloh/uebersicht)
 
