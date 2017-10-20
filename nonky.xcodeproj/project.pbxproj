@@ -61,9 +61,9 @@
 /* Begin PBXFileReference section */
 		B32111041F924B1700065809 /* nonkyserver */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nonkyserver; sourceTree = "<group>"; };
 		B32111091F924C2800065809 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = nonkyserver/public; sourceTree = SOURCE_ROOT; };
-		B321110D1F92533300065809 /* app-macos */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "app-macos"; path = "nonky/Supporting Files/app-macos"; sourceTree = SOURCE_ROOT; };
-		B321110F1F92555200065809 /* playerinfo.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; name = playerinfo.rb; path = "nonky/Supporting Files/playerinfo.rb"; sourceTree = SOURCE_ROOT; };
-		B32453E71F9238AC00E1923C /* smc.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = smc.node; sourceTree = "<group>"; };
+		B321110D1F92533300065809 /* app-macos */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "app-macos"; path = "nonky/app-macos"; sourceTree = SOURCE_ROOT; };
+		B321110F1F92555200065809 /* playerinfo.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; name = playerinfo.rb; path = nonky/playerinfo.rb; sourceTree = SOURCE_ROOT; };
+		B32453E71F9238AC00E1923C /* smc.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = smc.node; path = "Supporting Files/smc.node"; sourceTree = "<group>"; };
 		B38BCB821F912D8300F5C0E8 /* Qnonky.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Qnonky.icns; sourceTree = "<group>"; };
 		B38BCB841F912D8C00F5C0E8 /* status-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-icon.png"; sourceTree = "<group>"; };
 		B3E494981F99AF050027FCD4 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
@@ -124,9 +124,6 @@
 				B3E4949C1F99BFEC0027FCD4 /* dsa_pub.pem */,
 				B38BCB841F912D8C00F5C0E8 /* status-icon.png */,
 				B38BCB821F912D8300F5C0E8 /* Qnonky.icns */,
-				B32453E71F9238AC00E1923C /* smc.node */,
-				B321110F1F92555200065809 /* playerinfo.rb */,
-				B321110D1F92533300065809 /* app-macos */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,6 +152,9 @@
 		B3EACFE71F9021E400DBCBA9 /* nonky */ = {
 			isa = PBXGroup;
 			children = (
+				B321110D1F92533300065809 /* app-macos */,
+				B321110F1F92555200065809 /* playerinfo.rb */,
+				B32453E71F9238AC00E1923C /* smc.node */,
 				B3E494A01F99C60D0027FCD4 /* Supporting Files */,
 				B32111091F924C2800065809 /* public */,
 				B3EACFE81F9021E400DBCBA9 /* NOAppDelegate.h */,
