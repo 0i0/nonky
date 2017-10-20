@@ -356,7 +356,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"npm installing...\"\ncd nonkyserver\nnpm install\necho \"node pkg installing...\"\nnpm install -g pkg\necho \"replacing the missbehaving nowplaying lib..\"\ncp node_modules/nowplaying/index.js node_modules/nowplaying/tmp.js\nsed -e \"s~__dirname~process.env.HOME+'/Library/Application Support/nonky/public'~\" < node_modules/nowplaying/tmp.js > node_modules/nowplaying/index.js\nrm node_modules/nowplaying/tmp.js\necho \"copy the native smc to the project folder\"\ncp node_modules/smc/build/Release/smc.node ../nonky\necho \"pkging node server..\"\npkg app.js";
+			shellScript = "echo \"npm installing...\"\ncd nonkyserver\nnpm install\necho \"node pkg installing...\"\nnpm install -g pkg\necho \"replacing the missbehaving nowplaying lib..\"\ncp node_modules/nowplaying/index.js node_modules/nowplaying/tmp.js\nsed -e \"s~__dirname~process.env.HOME+'/Library/Application Support/nonky/public'~\" < node_modules/nowplaying/tmp.js > node_modules/nowplaying/index.js\nrm node_modules/nowplaying/tmp.js\necho \"copy the native smc to the project folder\"\ncp node_modules/smc/build/Release/smc.node ../nonky\necho \"cpoying playerinfo.rb\"\ncp node_modules/nowplaying/playerinfo.rb ../nonky\necho \"pkging node server..\"\npkg app.js\ncp app-macos ../nonky";
 		};
 /* End PBXShellScriptBuildPhase section */
 
