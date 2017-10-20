@@ -23,7 +23,10 @@ node_modules
 .eslintrc.json
 com.liorhakim.geektoolio.plist
 
-app-macos
-app-win.exe
-app-linux
 smc.node
+
+
+Supporting\ Files/app
+Supporting Files/app
+nonkyserver/app
+playerinfo.rb
