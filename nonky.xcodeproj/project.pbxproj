@@ -14,6 +14,9 @@
 		B38BCB831F912D8300F5C0E8 /* Qnonky.icns in Resources */ = {isa = PBXBuildFile; fileRef = B38BCB821F912D8300F5C0E8 /* Qnonky.icns */; };
 		B38BCB851F912D8C00F5C0E8 /* status-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BCB841F912D8C00F5C0E8 /* status-icon.png */; };
 		B3E494991F99AF050027FCD4 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E494981F99AF050027FCD4 /* CoreServices.framework */; };
+		B3E4949E1F99C4B40027FCD4 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E4949A1F99BD530027FCD4 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3E4949F1F99C5380027FCD4 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E4949A1F99BD530027FCD4 /* Sparkle.framework */; };
+		B3E494A11F99C6840027FCD4 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B3E4949C1F99BFEC0027FCD4 /* dsa_pub.pem */; };
 		B3EACFEA1F9021E400DBCBA9 /* NOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EACFE91F9021E400DBCBA9 /* NOAppDelegate.m */; };
 		B3EACFEC1F9021E400DBCBA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3EACFEB1F9021E400DBCBA9 /* Assets.xcassets */; };
 		B3EACFEF1F9021E400DBCBA9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EACFED1F9021E400DBCBA9 /* MainMenu.xib */; };
@@ -42,15 +45,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B3E4949D1F99C4AC0027FCD4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B3E4949E1F99C4B40027FCD4 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B32111041F924B1700065809 /* nonkyserver */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nonkyserver; sourceTree = "<group>"; };
 		B32111091F924C2800065809 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = nonkyserver/public; sourceTree = SOURCE_ROOT; };
-		B321110D1F92533300065809 /* app-macos */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "app-macos"; path = "nonkyserver/app-macos"; sourceTree = SOURCE_ROOT; };
-		B321110F1F92555200065809 /* playerinfo.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; name = playerinfo.rb; path = nonkyserver/node_modules/nowplaying/playerinfo.rb; sourceTree = SOURCE_ROOT; };
+		B321110D1F92533300065809 /* app-macos */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = "app-macos"; path = "nonky/Supporting Files/app-macos"; sourceTree = SOURCE_ROOT; };
+		B321110F1F92555200065809 /* playerinfo.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; name = playerinfo.rb; path = "nonky/Supporting Files/playerinfo.rb"; sourceTree = SOURCE_ROOT; };
 		B32453E71F9238AC00E1923C /* smc.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = smc.node; sourceTree = "<group>"; };
 		B38BCB821F912D8300F5C0E8 /* Qnonky.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Qnonky.icns; sourceTree = "<group>"; };
 		B38BCB841F912D8C00F5C0E8 /* status-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-icon.png"; sourceTree = "<group>"; };
 		B3E494981F99AF050027FCD4 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		B3E4949A1F99BD530027FCD4 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		B3E4949C1F99BFEC0027FCD4 /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		B3EACFE51F9021E400DBCBA9 /* nonky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nonky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3EACFE81F9021E400DBCBA9 /* NOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOAppDelegate.h; sourceTree = "<group>"; };
 		B3EACFE91F9021E400DBCBA9 /* NOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOAppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E494991F99AF050027FCD4 /* CoreServices.framework in Frameworks */,
+				B3E4949F1F99C5380027FCD4 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +118,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3E494A01F99C60D0027FCD4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3E4949C1F99BFEC0027FCD4 /* dsa_pub.pem */,
+				B38BCB841F912D8C00F5C0E8 /* status-icon.png */,
+				B38BCB821F912D8300F5C0E8 /* Qnonky.icns */,
+				B32453E71F9238AC00E1923C /* smc.node */,
+				B321110F1F92555200065809 /* playerinfo.rb */,
+				B321110D1F92533300065809 /* app-macos */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B3EACFDC1F9021E400DBCBA9 = {
 			isa = PBXGroup;
 			children = (
@@ -123,11 +155,8 @@
 		B3EACFE71F9021E400DBCBA9 /* nonky */ = {
 			isa = PBXGroup;
 			children = (
-				B321110D1F92533300065809 /* app-macos */,
+				B3E494A01F99C60D0027FCD4 /* Supporting Files */,
 				B32111091F924C2800065809 /* public */,
-				B32453E71F9238AC00E1923C /* smc.node */,
-				B38BCB841F912D8C00F5C0E8 /* status-icon.png */,
-				B38BCB821F912D8300F5C0E8 /* Qnonky.icns */,
 				B3EACFE81F9021E400DBCBA9 /* NOAppDelegate.h */,
 				B3EACFE91F9021E400DBCBA9 /* NOAppDelegate.m */,
 				B3EAD0151F9022B600DBCBA9 /* NOWindow.h */,
@@ -140,7 +169,6 @@
 				B3EACFF11F9021E400DBCBA9 /* main.m */,
 				B3EACFF01F9021E400DBCBA9 /* Info.plist */,
 				B3EACFF31F9021E400DBCBA9 /* nonky.entitlements */,
-				B321110F1F92555200065809 /* playerinfo.rb */,
 			);
 			path = nonky;
 			sourceTree = "<group>";
@@ -166,6 +194,7 @@
 		B3EAD0211F90BAB800DBCBA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3E4949A1F99BD530027FCD4 /* Sparkle.framework */,
 				B3E494981F99AF050027FCD4 /* CoreServices.framework */,
 				B32111041F924B1700065809 /* nonkyserver */,
 				B3EAD0221F90BAB800DBCBA9 /* ServiceManagement.framework */,
@@ -184,6 +213,7 @@
 				B3EACFE11F9021E400DBCBA9 /* Sources */,
 				B3EACFE21F9021E400DBCBA9 /* Frameworks */,
 				B3EACFE31F9021E400DBCBA9 /* Resources */,
+				B3E4949D1F99C4AC0027FCD4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -294,6 +324,7 @@
 				B38BCB851F912D8C00F5C0E8 /* status-icon.png in Resources */,
 				B32453E81F9238AC00E1923C /* smc.node in Resources */,
 				B3EACFEF1F9021E400DBCBA9 /* MainMenu.xib in Resources */,
+				B3E494A11F99C6840027FCD4 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,8 +525,12 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = nonky/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liorhakim.nonky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -509,8 +544,12 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = nonky/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liorhakim.nonky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

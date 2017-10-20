@@ -208,8 +208,6 @@ static NSString *const qDefaultTemplates = @"default-templates";
     });
 }
 
-static void fsEventsCallback(ConstFSEventStreamRef streamRef, void *clientCallBackInfo, size_t numEvents, void *eventPaths, const FSEventStreamEventFlags eventFlags[], const FSEventStreamEventId eventIds[]);
-
 - (void)initializeEventStream {
     NSArray *pathsToWatch = [NSArray arrayWithObject:templatesPath];
     FSEventStreamContext context;

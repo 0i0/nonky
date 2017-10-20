@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+<channel>
+<title>nonky</title>
+<item>
+<title>1.0</title>
+<pubDate>Sat, 14 Oct 2017 22:56:11 +0300</pubDate>
+<sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+<enclosure url="https://raw.githubusercontent.com/0i0/nonky/master/nonky-0.0.2.zip" sparkle:version="1" sparkle:shortVersionString="0.0.2" length="15774610" type="application/octet-stream" sparkle:dsaSignature="MBgCAAIUW41iJVoSjGFkwx5aRvTWMvD1w9k="/>
+</item>
+</channel></rss>
