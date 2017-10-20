@@ -25,8 +25,7 @@ com.liorhakim.geektoolio.plist
 
 smc.node
 
-
-Supporting\ Files/app
-Supporting Files/app
-nonkyserver/app
+/nonky/Supporting\ Files/app
+/nonky/Supporting Files/app
+/nonkyserver/app
 playerinfo.rb
