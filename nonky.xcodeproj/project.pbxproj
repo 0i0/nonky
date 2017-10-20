@@ -12,11 +12,12 @@
 		B32453E81F9238AC00E1923C /* smc.node in Resources */ = {isa = PBXBuildFile; fileRef = B32453E71F9238AC00E1923C /* smc.node */; };
 		B38BCB831F912D8300F5C0E8 /* Qnonky.icns in Resources */ = {isa = PBXBuildFile; fileRef = B38BCB821F912D8300F5C0E8 /* Qnonky.icns */; };
 		B38BCB851F912D8C00F5C0E8 /* status-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BCB841F912D8C00F5C0E8 /* status-icon.png */; };
+		B3A0ABD31F9AAE5200880381 /* node_corelocation.node in Resources */ = {isa = PBXBuildFile; fileRef = B3A0ABD21F9AAE5200880381 /* node_corelocation.node */; };
+		B3A0ABD51F9AAFC200880381 /* nonky-server in Resources */ = {isa = PBXBuildFile; fileRef = B3A0ABD41F9AAFC200880381 /* nonky-server */; };
 		B3E494991F99AF050027FCD4 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E494981F99AF050027FCD4 /* CoreServices.framework */; };
 		B3E4949E1F99C4B40027FCD4 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E4949A1F99BD530027FCD4 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3E4949F1F99C5380027FCD4 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E4949A1F99BD530027FCD4 /* Sparkle.framework */; };
 		B3E494A11F99C6840027FCD4 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B3E4949C1F99BFEC0027FCD4 /* dsa_pub.pem */; };
-		B3E494A31F99D4FB0027FCD4 /* app in Resources */ = {isa = PBXBuildFile; fileRef = B3E494A21F99D4FA0027FCD4 /* app */; };
 		B3EACFEA1F9021E400DBCBA9 /* NOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EACFE91F9021E400DBCBA9 /* NOAppDelegate.m */; };
 		B3EACFEC1F9021E400DBCBA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3EACFEB1F9021E400DBCBA9 /* Assets.xcassets */; };
 		B3EACFEF1F9021E400DBCBA9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EACFED1F9021E400DBCBA9 /* MainMenu.xib */; };
@@ -65,10 +66,11 @@
 		B32453E71F9238AC00E1923C /* smc.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = smc.node; sourceTree = "<group>"; };
 		B38BCB821F912D8300F5C0E8 /* Qnonky.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Qnonky.icns; sourceTree = "<group>"; };
 		B38BCB841F912D8C00F5C0E8 /* status-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-icon.png"; sourceTree = "<group>"; };
+		B3A0ABD21F9AAE5200880381 /* node_corelocation.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = node_corelocation.node; sourceTree = "<group>"; };
+		B3A0ABD41F9AAFC200880381 /* nonky-server */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "nonky-server"; sourceTree = "<group>"; };
 		B3E494981F99AF050027FCD4 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		B3E4949A1F99BD530027FCD4 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		B3E4949C1F99BFEC0027FCD4 /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		B3E494A21F99D4FA0027FCD4 /* app */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = app; sourceTree = "<group>"; };
 		B3EACFE51F9021E400DBCBA9 /* nonky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nonky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3EACFE81F9021E400DBCBA9 /* NOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOAppDelegate.h; sourceTree = "<group>"; };
 		B3EACFE91F9021E400DBCBA9 /* NOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOAppDelegate.m; sourceTree = "<group>"; };
@@ -121,7 +123,8 @@
 		B3E494A01F99C60D0027FCD4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B3E494A21F99D4FA0027FCD4 /* app */,
+				B3A0ABD41F9AAFC200880381 /* nonky-server */,
+				B3A0ABD21F9AAE5200880381 /* node_corelocation.node */,
 				B321110F1F92555200065809 /* playerinfo.rb */,
 				B32453E71F9238AC00E1923C /* smc.node */,
 				B3E4949C1F99BFEC0027FCD4 /* dsa_pub.pem */,
@@ -317,7 +320,6 @@
 			files = (
 				B321110A1F924D6100065809 /* public in Resources */,
 				B3EACFEC1F9021E400DBCBA9 /* Assets.xcassets in Resources */,
-				B3E494A31F99D4FB0027FCD4 /* app in Resources */,
 				B3EAD01D1F90B69400DBCBA9 /* Preferences.xib in Resources */,
 				B38BCB831F912D8300F5C0E8 /* Qnonky.icns in Resources */,
 				B32111101F92555200065809 /* playerinfo.rb in Resources */,
@@ -325,6 +327,8 @@
 				B32453E81F9238AC00E1923C /* smc.node in Resources */,
 				B3EACFEF1F9021E400DBCBA9 /* MainMenu.xib in Resources */,
 				B3E494A11F99C6840027FCD4 /* dsa_pub.pem in Resources */,
+				B3A0ABD51F9AAFC200880381 /* nonky-server in Resources */,
+				B3A0ABD31F9AAE5200880381 /* node_corelocation.node in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +360,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"npm installing...\"\ncd nonkyserver\nnpm install\necho \"node pkg installing...\"\nnpm install -g pkg\necho \"replacing the missbehaving nowplaying lib..\"\ncp node_modules/nowplaying/index.js node_modules/nowplaying/tmp.js\nsed -e \"s~__dirname~process.env.HOME+'/Library/Application Support/nonky/public'~\" < node_modules/nowplaying/tmp.js > node_modules/nowplaying/index.js\nrm node_modules/nowplaying/tmp.js\necho \"copy the native smc to the project folder\"\ncp node_modules/smc/build/Release/smc.node ../nonky/Supporting\\ Files\necho \"cpoying playerinfo.rb\"\ncp node_modules/nowplaying/playerinfo.rb ../nonky/Supporting\\ Files\necho \"pkging node server..\"\npkg --targets macos app.js\ncp app ../nonky/Supporting\\ Files";
+			shellScript = "echo \"npm installing...\"\ncd nonkyserver\nnpm install\necho \"node pkg installing...\"\nnpm install -g pkg\necho \"replacing the missbehaving nowplaying lib..\"\ncp node_modules/nowplaying/index.js node_modules/nowplaying/tmp.js\nsed -e \"s~__dirname~process.env.HOME+'/Library/Application Support/nonky/public'~\" < node_modules/nowplaying/tmp.js > node_modules/nowplaying/index.js\nrm node_modules/nowplaying/tmp.js\necho \"copy the native smc to the project folder\"\ncp node_modules/smc/build/Release/smc.node ../nonky/Supporting\\ Files\necho \"copy the native smc to the project folder\"\ncp node_modules/corelocation/build/Release/node_corelocation.node ../nonky/Supporting\\ Files\necho \"cpoying playerinfo.rb\"\ncp node_modules/nowplaying/playerinfo.rb ../nonky/Supporting\\ Files\necho \"pkging node server..\"\npkg --targets macos nonky-server.js\ncp nonky-server ../nonky/Supporting\\ Files";
 		};
 /* End PBXShellScriptBuildPhase section */
 

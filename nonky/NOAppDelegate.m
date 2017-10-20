@@ -93,7 +93,7 @@ static NSString *const qDefaultTemplates = @"default-templates";
 }
 -(void)startServer{
     task = [[NSTask alloc] init];
-    [task setLaunchPath:[[NSBundle mainBundle] pathForResource:@"app" ofType:nil]];
+    [task setLaunchPath:[[NSBundle mainBundle] pathForResource:@"nonky-server" ofType:nil]];
 
     NSPipe *temppipe = [NSPipe pipe];
     [task setStandardOutput:temppipe];

@@ -9,6 +9,7 @@ var os            = require('os')
   , nowplaying    = require('nowplaying')
   , express       = require('express')
   , xml2js        = require('xml2js')
+  , cl            = require('corelocation')
 
 var app = express()
 var http = require('http').Server(app)
@@ -104,6 +105,10 @@ app.get('/api/proxy', function (req, res) {
     if(res.statusCode !== 200 ) return
     res.send(body)
   })
+})
+
+app.get('/api/location', function (req, res) {
+  res.send(cl.getLocation())
 })
 
 io.on('connection', function(socket){

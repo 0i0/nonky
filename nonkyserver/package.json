@@ -18,7 +18,8 @@
     "smc": ">=0.0.1",
     "socket.io": ">=0.0.1",
     "systeminformation": ">=0.0.1",
-    "xml2js": ">=0.0.1"
+    "xml2js": ">=0.0.1",
+    "corelocation": "file:../../node-corelocation"
   },
   "devDependencies": {
     "eslint": "^4.8.0"

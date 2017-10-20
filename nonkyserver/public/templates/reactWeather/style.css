@@ -12,8 +12,8 @@ body{
 }
 
 #anchor{
-  right: 0px;
-  bottom: 0px;
+  top: 0px;
+  left: 0px;
   position: absolute;
   margin:15px
 }
