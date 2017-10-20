@@ -62,6 +62,10 @@ Provides information about cryptocurrency rate from coinmarketcap.com
 
 Provides a proxy to make cross origin api requests to 3rd parties for example check out the weather template
 
+    /api/location
+
+Provides a [longitude,latitude] so you can use location based services, cheach the weather template for example
+
 # Websockets
 
 Websockets are used to provide events as they happen
