@@ -89,6 +89,14 @@ It is very tempting adding an API for arbitrary shell command, its very easy to 
 
 # Building from source
 
+# Install Dependencies
+
+brew - https://brew.sh/
+
+node & npm
+
+	brew install node
+
 # Clone git Repo
 
     git clone https://github.com/0i0/nonky.git
