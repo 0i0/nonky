@@ -95,6 +95,17 @@ app.get('/api/crypto', function (req, res) {
   })
 })
 
+app.get('/api/proxy', function (req, res) {
+  var url = req.query.url
+  request.get(url,{
+    maxRedirects: 5
+  },function(err,gres,body){
+    if(err) return
+    if(res.statusCode !== 200 ) return
+    res.send(body)
+  })
+})
+
 io.on('connection', function(socket){
   nowplaying.on('playing', function (data) {
     var url = 'http://ws.audioscrobbler.com/2.0/?method=album.getinfo&artist=' + 

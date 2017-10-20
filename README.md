@@ -58,6 +58,10 @@ Columns are (1)PID (2)CPU Usage (3)Memory usage (4)process name
 
 Provides information about cryptocurrency rate from coinmarketcap.com
 
+    /api/proxy?url=http://example.com
+
+Provides a proxy to make cross origin api requests to 3rd parties for example check out the weather template
+
 # Websockets
 
 Websockets are used to provide events as they happen

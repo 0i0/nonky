@@ -1,0 +1,63 @@
+html, body{
+    height: 100%;
+}
+
+body{
+   font-family: 'Saira Extra Condensed', sans-serif;
+   font-size: 16px;
+   color: #FFF;
+   width: 100%;
+   -webkit-font-smoothing: antialiased;
+   /*background-color: #1c1a6f; */
+}
+
+#anchor{
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+  margin:15px
+}
+li{
+  position:relative;
+  width: 120px;
+  height:50px;
+  background-color: rgba(51, 51, 51, 0.33);
+  padding: 20px;
+  /*border: 1px solid;*/
+  margin-left: 10px;
+  margin-bottom:10px;
+  border-radius:50px
+}
+.fade-in{
+  -webkit-animation: fadein 1s;
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.fade-out{
+  -webkit-animation: fadeout 1s;
+}
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+.weather-icon {
+    width: 32px;
+    position: absolute;
+    top:0px;
+    right:0px;
+    margin:15px 30px;
+}
+
+.day{
+  position:absolute;
+  bottom:0px;
+  right:0px;
+  margin:10px 25px
+}
+.temp{
+  font-weight:100;
+  font-size:50px;
+}
