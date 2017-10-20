@@ -14,11 +14,12 @@
 @property (weak) IBOutlet NSMenu *statusMenu;
 @property (weak) IBOutlet NSMenu *templatesMenu;
 
+
 @property BOOL *serverIsUp;
 
 - (IBAction)showPreferences:(id)sender;
 - (IBAction)tryToReconnect:(id)sender;
 - (IBAction)openTemplatesDir:(id)sender;
-
+- (IBAction)ReloadAll:(id)sender;
 @end
 

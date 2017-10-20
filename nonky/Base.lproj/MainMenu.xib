@@ -692,6 +692,12 @@
                         <action selector="orderFrontStandardAboutPanel:" target="-2" id="6na-O6-RhN"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Reload All" id="zHk-BY-nEV">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="ReloadAll:" target="Voe-Tx-rLC" id="IBM-q6-Oq9"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="rTv-T9-zvb"/>
                 <menuItem title="Templaes" id="stK-VD-KXW">
                     <modifierMask key="keyEquivalentModifierMask"/>

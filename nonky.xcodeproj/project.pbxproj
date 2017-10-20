@@ -13,6 +13,7 @@
 		B32453E81F9238AC00E1923C /* smc.node in Resources */ = {isa = PBXBuildFile; fileRef = B32453E71F9238AC00E1923C /* smc.node */; };
 		B38BCB831F912D8300F5C0E8 /* Qnonky.icns in Resources */ = {isa = PBXBuildFile; fileRef = B38BCB821F912D8300F5C0E8 /* Qnonky.icns */; };
 		B38BCB851F912D8C00F5C0E8 /* status-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BCB841F912D8C00F5C0E8 /* status-icon.png */; };
+		B3E494991F99AF050027FCD4 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E494981F99AF050027FCD4 /* CoreServices.framework */; };
 		B3EACFEA1F9021E400DBCBA9 /* NOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EACFE91F9021E400DBCBA9 /* NOAppDelegate.m */; };
 		B3EACFEC1F9021E400DBCBA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3EACFEB1F9021E400DBCBA9 /* Assets.xcassets */; };
 		B3EACFEF1F9021E400DBCBA9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EACFED1F9021E400DBCBA9 /* MainMenu.xib */; };
@@ -49,6 +50,7 @@
 		B32453E71F9238AC00E1923C /* smc.node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = smc.node; sourceTree = "<group>"; };
 		B38BCB821F912D8300F5C0E8 /* Qnonky.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Qnonky.icns; sourceTree = "<group>"; };
 		B38BCB841F912D8C00F5C0E8 /* status-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-icon.png"; sourceTree = "<group>"; };
+		B3E494981F99AF050027FCD4 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		B3EACFE51F9021E400DBCBA9 /* nonky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nonky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3EACFE81F9021E400DBCBA9 /* NOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOAppDelegate.h; sourceTree = "<group>"; };
 		B3EACFE91F9021E400DBCBA9 /* NOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOAppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E494991F99AF050027FCD4 /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +166,7 @@
 		B3EAD0211F90BAB800DBCBA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3E494981F99AF050027FCD4 /* CoreServices.framework */,
 				B32111041F924B1700065809 /* nonkyserver */,
 				B3EAD0221F90BAB800DBCBA9 /* ServiceManagement.framework */,
 			);

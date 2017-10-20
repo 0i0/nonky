@@ -9,6 +9,7 @@
 #import "NOAppDelegate.h"
 #import "NOWindow.h"
 #import "NOPreferencesController.h"
+#include <CoreServices/CoreServices.h>
 
 static NSString *const qBaseUrlValue = @"http://localhost:26498";
 static NSString *const qDefaultTemplates = @"default-templates";
@@ -26,13 +27,16 @@ static NSString *const qDefaultTemplates = @"default-templates";
     NSMutableDictionary *defaultTemplates;
     BOOL isServerUP;
     NSTask *task;
+    NSString *templatesPath;
+    FSEventStreamRef stream;
 }
 
 @synthesize statusMenu;
 @synthesize templatesMenu;
 
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    
+    templatesPath = [NSString stringWithFormat:@"%@/%@", NSHomeDirectory(), @"/Library/Application Support/nonky/public/templates/"];
     [self createAppDirectory];
     [self startServer];
     windows = [[NSMutableDictionary alloc] initWithCapacity:10];
@@ -42,6 +46,7 @@ static NSString *const qDefaultTemplates = @"default-templates";
     statusItem = [self addStatusItemToMenu: statusMenu];
     preferences = [[NOPreferencesController alloc]initWithWindowNibName:@"Preferences"];
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(getTemplatesWithRetryCounter:) userInfo:@(5) repeats:NO];
+    [self initializeEventStream];
 
 }
 -(void)setDefaultsIfNecessary{
@@ -102,7 +107,7 @@ static NSString *const qDefaultTemplates = @"default-templates";
 //    NSLog(@"%@", resultErr);
 }
 - (IBAction)openTemplatesDir:(id)sender{
-    NSURL *folderURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", NSHomeDirectory(), @"/Library/Application Support/nonky/public/templates/"]];
+    NSURL *folderURL = [NSURL fileURLWithPath:templatesPath];
     [[NSWorkspace sharedWorkspace] openURL: folderURL];
 }
 - (IBAction)showPreferences:(id)sender
@@ -118,7 +123,6 @@ static NSString *const qDefaultTemplates = @"default-templates";
     }
     retryCounter--;
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    __weak typeof (self) weakSelf = self;
     [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", qBaseUrlValue, @"/api/templates"]]];
     [request setHTTPMethod:@"GET"];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
@@ -126,10 +130,6 @@ static NSString *const qDefaultTemplates = @"default-templates";
         if (error) {
             NSLog(@"dataTaskWithRequest error: %@", error);
             NSLog(@"retry: %@", @(retryCounter));
-            //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
-//            [NSTimer scheduledTimerWithTimeInterval:1 target:weakSelf selector:@selector(getTemplatesWithRetryCounter:) userInfo:@(retryCounter) repeats:NO];
-            //[weakSelf getTemplatesWithRetryCounter:retryCounter]
-            //});
         }else{
             templatesArray = [NSJSONSerialization JSONObjectWithData:data
                                                              options:kNilOptions
@@ -193,6 +193,10 @@ static NSString *const qDefaultTemplates = @"default-templates";
          }
     }];
 }
+- (IBAction)ReloadAll:(id)sender{
+    [self getTemplatesWithRetryCounter:4];
+}
+
 -(void)loadTemplateWithName:(NSString *)templateName{
     NSString* templateURL = [NSString stringWithFormat:@"%@%@%@", qBaseUrlValue,@"/templates/", templateName];
     [windows removeObjectForKey:templateName];
@@ -204,5 +208,30 @@ static NSString *const qDefaultTemplates = @"default-templates";
     });
 }
 
+static void fsEventsCallback(ConstFSEventStreamRef streamRef, void *clientCallBackInfo, size_t numEvents, void *eventPaths, const FSEventStreamEventFlags eventFlags[], const FSEventStreamEventId eventIds[]);
 
+- (void)initializeEventStream {
+    NSArray *pathsToWatch = [NSArray arrayWithObject:templatesPath];
+    FSEventStreamContext context;
+    context.info = (__bridge void * _Nullable)(self);
+    context.version = 0;
+    context.retain = NULL;
+    context.release = NULL;
+    context.copyDescription = NULL;
+    stream = FSEventStreamCreate(NULL, mycallback, &context, (__bridge CFArrayRef)pathsToWatch, kFSEventStreamEventIdSinceNow, 1.0, kFSEventStreamCreateFlagWatchRoot);
+    FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
+    FSEventStreamStart(stream);
+    
+}
+
+void mycallback(
+                ConstFSEventStreamRef streamRef,
+                void *clientCallBackInfo,
+                size_t numEvents,
+                void *eventPaths,
+                const FSEventStreamEventFlags eventFlags[],
+                const FSEventStreamEventId eventIds[])
+{
+    [((__bridge NOAppDelegate*)clientCallBackInfo) getTemplatesWithRetryCounter:4];
+}
 @end
