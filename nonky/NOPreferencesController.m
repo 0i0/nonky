@@ -72,14 +72,10 @@
     NSArray *loginItems = (__bridge NSArray *)LSSharedFileListCopySnapshot(loginItemsRef, nil);
     for (int currentIndex = 0; currentIndex < [loginItems count]; currentIndex++) {
         // Get the current LoginItem and resolve its URL.
-        CFURLRef itemURLRef;
         LSSharedFileListItemRef currentItemRef = (__bridge LSSharedFileListItemRef)[loginItems objectAtIndex:currentIndex];
-        if (LSSharedFileListItemResolve(currentItemRef, 0, &itemURLRef, NULL) == noErr) {
-            // Compare the URLs for the current LoginItem and the app.
-            if ([appUrl isEqual:((__bridge NSURL *)itemURLRef)]) {
-                // Save the LoginItem reference.
-                itemRef = currentItemRef;
-            }
+        if ([appUrl isEqual:(__bridge id)(LSSharedFileListItemCopyResolvedURL(currentItemRef, 0, NULL))]) {
+            // Save the LoginItem reference.
+            itemRef = currentItemRef;
         }
     }
     // Retain the LoginItem reference.
@@ -97,15 +93,12 @@
     NSURL *bundleURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
     
     LSSharedFileListItemRef itemRef = NULL;
-    CFURLRef itemURLRef;
     
     for (id item in (__bridge NSArray*)snapshotRef) {
         itemRef = (__bridge LSSharedFileListItemRef)item;
-        if (LSSharedFileListItemResolve(itemRef, 0, &itemURLRef, NULL) == noErr) {
-            if ([bundleURL isEqual:((__bridge NSURL *)itemURLRef)]) {
-                CFRetain(itemRef);
-                break;
-            }
+        if ([bundleURL isEqual:((__bridge NSURL *)LSSharedFileListItemCopyResolvedURL(itemRef, 0 , NULL))]) {
+            CFRetain(itemRef);
+            break;
         }
         itemRef = NULL;
     }

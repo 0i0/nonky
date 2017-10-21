@@ -19,7 +19,7 @@
     "socket.io": ">=0.0.1",
     "systeminformation": ">=0.0.1",
     "xml2js": ">=0.0.1",
-    "corelocation": "file:../../node-corelocation"
+    "corelocation": ">=0.0.1"
   },
   "devDependencies": {
     "eslint": "^4.8.0"
