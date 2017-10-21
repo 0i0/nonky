@@ -8,6 +8,6 @@
 </sparkle:releaseNotesLink>
 <pubDate>Sat, 14 Oct 2017 23:50:11 +0300</pubDate>
 <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/0i0/nonky/releases/download/v0.0.5/nonky-0.0.5.zip" sparkle:version="2" sparkle:shortVersionString="0.0.5" length="15788677" type="application/octet-stream" sparkle:dsaSignature="MCwCFGNei1KYGnv3oLBDqUirCTX6v7lGAhRn2PxuCdmjLV/5lGobZLMLd/e0hw=="/>
+<enclosure url="https://github.com/0i0/nonky/releases/download/v0.0.5/nonky-0.0.5.zip" sparkle:version="3" sparkle:shortVersionString="0.0.5" length="15788677" type="application/octet-stream" sparkle:dsaSignature="MCwCFGNei1KYGnv3oLBDqUirCTX6v7lGAhRn2PxuCdmjLV/5lGobZLMLd/e0hw=="/>
 </item>
 </channel></rss>
