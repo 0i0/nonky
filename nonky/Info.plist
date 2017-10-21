@@ -9,7 +9,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.0.3</string>
+	<string>0.0.5</string>
 	<key>LSBackgroundOnly</key>
 	<false/>
 	<key>CFBundleVersion</key>
@@ -36,7 +36,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>SUFeedURL</key>
-	<string>https://0i0.github.io/nonky/appcast.xml</string>
+	<string>https://raw.githubusercontent.com/0i0/nonky/master/appcast.xml</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>NSHumanReadableCopyright</key>
