@@ -16,14 +16,14 @@
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="529" y="471" width="214" height="102"/>
+            <rect key="contentRect" x="529" y="471" width="263" height="135"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="214" height="102"/>
+                <rect key="frame" x="0.0" y="0.0" width="263" height="135"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vxH-07-fnj">
-                        <rect key="frame" x="18" y="59" width="178" height="25"/>
+                        <rect key="frame" x="18" y="92" width="178" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Launch nonky at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="jed-wG-nR4">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -33,8 +33,25 @@
                             <action selector="toggleLaunchAtStartup:" target="-2" id="TnB-vq-2I3"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAC-TO-PHB">
+                        <rect key="frame" x="18" y="52" width="217" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Automatically check for updates" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Lqr-NK-LIj">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <binding destination="q6A-6g-7SK" name="value" keyPath="automaticallyChecksForUpdates" id="Zk9-ky-Lfg">
+                                    <dictionary key="options">
+                                        <bool key="NSConditionallySetsEditable" value="YES"/>
+                                        <bool key="NSConditionallySetsEnabled" value="NO"/>
+                                    </dictionary>
+                                </binding>
+                                <outlet property="representedObject" destination="q6A-6g-7SK" id="rLa-gO-ZpP"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbC-u7-hGs">
-                        <rect key="frame" x="42" y="13" width="129" height="32"/>
+                        <rect key="frame" x="14" y="13" width="129" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Reset Defaults" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GFD-Bp-0yC">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -49,8 +66,10 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="nTf-AQ-e4c"/>
             </connections>
-            <point key="canvasLocation" x="123" y="69"/>
+            <point key="canvasLocation" x="147.5" y="85.5"/>
         </window>
         <customObject id="SRj-g0-tgh"/>
+        <customObject id="q6A-6g-7SK" customClass="SUUpdater"/>
+        <userDefaultsController representsSharedInstance="YES" id="cYz-37-2aT"/>
     </objects>
 </document>
