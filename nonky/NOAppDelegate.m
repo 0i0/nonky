@@ -14,6 +14,8 @@
 static NSString *const qBaseUrlValue = @"http://localhost:26498";
 static NSString *const qDefaultTemplates = @"default-templates";
 
+static NSString *const qWasUpdated = @"was-updated";
+
 @interface NOAppDelegate ()
 
 @end
@@ -37,11 +39,12 @@ static NSString *const qDefaultTemplates = @"default-templates";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     templatesPath = [NSString stringWithFormat:@"%@/%@", NSHomeDirectory(), @"/Library/Application Support/nonky/public/templates/"];
+    userDefaults = [NSUserDefaults standardUserDefaults];
+    [self setDefaultsIfNecessary];
     [self createAppDirectory];
     [self startServer];
     windows = [[NSMutableDictionary alloc] initWithCapacity:10];
-    userDefaults = [NSUserDefaults standardUserDefaults];
-    [self setDefaultsIfNecessary];
+    
     defaultTemplates = [[userDefaults objectForKey:qDefaultTemplates] mutableCopy];
     statusItem = [self addStatusItemToMenu: statusMenu];
     preferences = [[NOPreferencesController alloc]initWithWindowNibName:@"Preferences"];
@@ -53,6 +56,10 @@ static NSString *const qDefaultTemplates = @"default-templates";
     if ([userDefaults objectForKey:qDefaultTemplates] == nil) {
         NSDictionary *DefaultTemplates = [[NSDictionary alloc] initWithObjectsAndKeys:@"YES",@"jquery", nil];
         [userDefaults setObject:DefaultTemplates forKey:qDefaultTemplates];
+        
+    }
+    if ([userDefaults objectForKey:qWasUpdated] == nil) {
+        [userDefaults setBool:NO forKey:qWasUpdated];
     }
 }
 - (NSStatusItem*)addStatusItemToMenu:(NSMenu*)menu
@@ -85,10 +92,36 @@ static NSString *const qDefaultTemplates = @"default-templates";
             NSLog(@"Error: Create folder failed %@", userpath);
     userpath = [userpath stringByAppendingPathComponent:executableName];    // The file will go in this directory
     NSString *savePath = [userpath stringByAppendingPathComponent:@"public"];
+    NSString *srcPath = [thisBundle pathForResource:@"public" ofType:nil];
 
     if ([fileManager fileExistsAtPath:userpath] == NO){
         [fileManager createDirectoryAtPath:userpath withIntermediateDirectories:YES attributes:nil error:nil];
-        [fileManager copyItemAtPath:[thisBundle pathForResource:@"public" ofType:nil] toPath:savePath error:NULL];
+        [fileManager copyItemAtPath:srcPath toPath:savePath error:NULL];
+    }else{
+        if(![userDefaults boolForKey:qWasUpdated]){
+            NSDirectoryEnumerator *de = [fileManager enumeratorAtPath:[thisBundle pathForResource:@"public" ofType:nil]];
+            NSString *subPath;
+            while ((subPath = [de nextObject])) {
+                
+                NSLog(@" subPath: %@", subPath);
+                NSString *srcFullPath =  [srcPath stringByAppendingPathComponent:subPath];
+                NSString *potentialDstPath = [savePath stringByAppendingPathComponent:subPath];
+                
+                // Need to also check if file exists because if it doesn't, value of `isDirectory` is undefined.
+                BOOL isDirectory = ([[NSFileManager defaultManager] fileExistsAtPath:srcFullPath isDirectory:&isDirectory] && isDirectory);
+                
+                // Create directory, if doesn't exist
+                if (isDirectory && [fileManager fileExistsAtPath:potentialDstPath] == NO) {
+                    NSLog(@"   create directory");
+                    [fileManager createDirectoryAtPath:potentialDstPath withIntermediateDirectories:YES attributes:nil error:NULL];
+                }
+                if (!isDirectory && ![fileManager fileExistsAtPath:potentialDstPath]) {
+                    [fileManager copyItemAtPath:srcFullPath toPath:potentialDstPath error:NULL];
+
+                }
+            }
+            [userDefaults setBool:YES forKey:qWasUpdated];
+        }
     }
 }
 -(void)startServer{

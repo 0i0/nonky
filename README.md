@@ -19,7 +19,7 @@ To make your own nonky
 - Download the app
 - Open it
 - Click on the pin icon
-- select "Templates Directory..."
+- select "Templates Folder..."
 - Create a new folder with the \<name of your template\>
 - make the powerhouse index.html, style.css, script.js
 - create your design - follow the examples
@@ -29,7 +29,7 @@ To make your own nonky
 # the API
 
 # RESTFull API
-There is a RESTFull API to get sistem information
+There is a RESTFull API to get system information
 
     /api/cpus/:samplesNumber/:sampleTimeInMiliseconds
 
@@ -97,7 +97,7 @@ It is very tempting adding an API for arbitrary shell command, its very easy to 
 
 # Building from source
 
-# Install Dependencies
+# Dependencies
 
 brew - https://brew.sh/
 
