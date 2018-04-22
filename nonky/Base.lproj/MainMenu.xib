@@ -699,7 +699,7 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="rTv-T9-zvb"/>
-                <menuItem title="Templaes" id="stK-VD-KXW">
+                <menuItem title="Templates" id="stK-VD-KXW">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" id="js4-Py-fiO" userLabel="TemplatesMenu">
                         <items>
