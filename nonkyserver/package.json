@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "express": ">=0.0.1",
-    "nowplaying": ">=0.0.1",
+    "nowplaying": "=1.1.0",
     "request": ">=0.0.1",
     "smc": ">=0.0.1",
     "socket.io": ">=0.0.1",
