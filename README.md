@@ -139,7 +139,7 @@ If you enjoyed please consider tipping me @
 
 Bitcoin 
 	
-	142jKB3e9uC8sSmssKtp5NtWScarZdYpuH
+	1C7hCuKc2ak9XU6zLVrhxGnQf33rqVPoqB
 
 Ethereum
 
